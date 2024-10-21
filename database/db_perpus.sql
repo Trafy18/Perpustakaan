@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 20, 2022 at 09:33 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.1
+-- Generation Time: Oct 21, 2024 at 05:49 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -34,14 +33,14 @@ CREATE TABLE `admin` (
   `password` varchar(15) NOT NULL,
   `fullname` varchar(30) NOT NULL,
   `gambar` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`user_id`, `username`, `password`, `fullname`, `gambar`) VALUES
-(3, 'admin', 'admin', 'Admin Perpustakaan BOOK-KU', 'gambar_admin/ssamson.jpg');
+(3, 'admin', 'admin', 'Admin Perpustakaan BOOK-KU', 'gambar_admin/foto.jpg');
 
 -- --------------------------------------------------------
 
@@ -60,15 +59,15 @@ CREATE TABLE `data_anggota` (
   `ttl` varchar(100) NOT NULL,
   `alamat` varchar(250) NOT NULL,
   `foto` varchar(75) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `data_anggota`
 --
 
 INSERT INTO `data_anggota` (`id`, `no_induk`, `nama`, `username`, `password`, `jk`, `kelas`, `ttl`, `alamat`, `foto`) VALUES
-(2, 'anggota@gmail.com', 'anggota', 'anggota', 'anggota', 'P', '10', 'Konawe, 12 09 1999', 'Semarang', 'gambar_anggota/IMG-20191104-WA0043.jpg'),
-(20, 'user@gmail.com', 'user', 'user', 'user', 'L', '39', 'Mandonga, 28 03 1887', 'Mandonga', '');
+(2, 'anggota@gmail.com', 'anggota', 'anggota', 'anggota', 'P', '10', 'Konawe, 12 09 1999', 'Semarang', 'gambar_anggota/foto.jpg'),
+(20, 'user@gmail.com', 'user', 'user', 'user', 'L', '39', 'Mandonga, 28 03 1887', 'Mandonga', 'gambar_anggota/ssamson.jpg');
 
 -- --------------------------------------------------------
 
@@ -89,7 +88,7 @@ CREATE TABLE `data_buku` (
   `tgl_input` varchar(75) NOT NULL,
   `gambar` text NOT NULL,
   `link_buku` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `data_buku`
@@ -131,7 +130,7 @@ CREATE TABLE `pengunjung` (
   `saran` varchar(255) NOT NULL,
   `tgl_kunjung` date NOT NULL,
   `jam_kunjung` time NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `pengunjung`
